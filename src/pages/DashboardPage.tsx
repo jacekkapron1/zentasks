@@ -3,9 +3,9 @@ import { useClientsStore } from "../store/useClientsStore";
 import { useStatusesStore } from "../store/useStatusesStore";
 
 export default function DashboardPage() {
-    const { tasks } = useTasksStore;
-    const { clients } = useClientsStore;
-    const { statses } = useStatusesStore;
+    const { tasks } = useTasksStore();
+    const { clients } = useClientsStore();
+    const { statuses } = useStatusesStore();
 
     const totalTasks = tasks.length;
     const doneTasks = tasks.filter((t) => t.statusId === 'done').length;
